@@ -103,7 +103,7 @@
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--resume"
-                  href="assets/anton_igudesman_resume.pdf"
+                  href="assets/anton_igudesman_development.docx"
                 >
                   View Resume
                 </a>
@@ -129,12 +129,13 @@
                 <div>
                   <p class="mb-4">
                     This is an online music player that takes songs from YouTube or SoundCloud and allows the user to create dynamic, custom
-                    playlists. Tech stack includes React.js, including built in state management using useReducer and UseContext. React also has
-                    a built in media player called ReactPlayer that was used for this project. Apollo Client was used to connect the front end
-                    to a database I set up on Neon, a serverless database host. This Project was built in order to explore and work with GraphQL and RestAPI alternative - the main advantage 
-                    with GraphQL is that you create custom queries, so that you only get the data that you need instead of a response 
-                    as a JSON object of information that you don't need. Some drawbacks to GraphQL, are that it brings in some added complexity,
-                    so for simple projects GraphQL may be overkill and not necessary.
+                    playlists. Tech stack includes React.js, including built in state management using useReducer and UseContext - although not a full-on replacement, 
+                    this project shows that for many cases, it is very possible to have a good state management system without having to install the extra Redux package, 
+                    using Provider, Consumer and React hooks. React also has a built in media player called ReactPlayer that was used for this project. Apollo Client was 
+                    used to connect the front end to a database I set up on Neon, a serverless database host. This Project was built in order to explore and work with GraphQL 
+                    a RestAPI alternative - the main advantage with GraphQL is the ability create custom queries, which only return the necessary data instead of a JSON object 
+                    full of unnecessary data. Possible drawbacks to GraphQL, lie in the fact that the queries can quickly become complex, so for simple projects GraphQL may be 
+                    overkill and not necessary.
                   </p>
                 </div>
                 <a
@@ -157,7 +158,7 @@
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="https://apollo-music-player.onrender.com/" target="_blank">
+                <a rel="noreferrer" href="https://github.com/Anton-Igudesman/apollo-music-player" target="_blank">
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -181,22 +182,22 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Face Recognition App</h3>
+                <h3 class="project-wrapper__text-title">P2P Video Chat API</h3>
                 <div>
                   <p class="mb-4">
-                    App allows for user login utilizing database to persist information and allow users to keep track of
-                    photos they have uploaded into the face recognition app. The technology allows a user to grab the link to any 
-                    image found on the web featuring a person's face. When the user enters the link to the image the app will display
-                    the image and be able to detect where the face is in the picture, and display a blue box around it. The app also
-                    tracks how many pictures a user has submitted over time. Project utilizes React.js for front-end and Redux for state management,
-                    with and Express.js server taking care of the API calls and running a PostgreSQL database running on Render host site.
+                    This app is my foray into the amazing and mind blowing world of webRTC protocol - The Front-end (HTML/CSS) and folder structure 
+                    of the project is rudimentary as I was mainly focusing on practicing with webRTC protocols including signaling - creating an offer and a response
+                    between 2 host computers. Each client is setting up a local stream for itself (audio and video) and a remote stream for the incoming audio and video.
+                    There is a peer connection that is generated after a mutual offer and response between 2 hosts, and an exchange of viable ICE candidates. With this project 
+                    I am having trouble correctly initializing STUN servers, so currently the App only works when clients are connected on the same WiFi - otherwise,
+                    I have tested that both users are able to join a mutually selected chatroom, but there is no exchange of audio or video.
                   </p>
                 </div>
                 <a
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--hero"
-                  href="https://face-recognition-app-k1ok.onrender.com/"
+                  href="https://elegant-dodol-e07368.netlify.app"
                 >
                   See Live
                 </a>
@@ -204,7 +205,7 @@
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn text-color-main"
-                  href="https://github.com/Anton-Igudesman/face-recognition-app"
+                  href="https://github.com/Anton-Igudesman/VideoChatAPI"
                 >
                   Source Code
                 </a>
@@ -212,7 +213,7 @@
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="https://face-recognition-app-k1ok.onrender.com/" target="_blank">
+                <a rel="noreferrer" href="https://github.com/Anton-Igudesman/VideoChatAPI" target="_blank">
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -223,7 +224,7 @@
                     <img
                       alt="Project Image"
                       class="img-fluid"
-                      src="./assets/face-recognition-app.png"
+                      src="./assets/videoChat.png"
                     />
                   </div>
                 </a>
@@ -236,18 +237,21 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">GraphQL ToDo List</h3>
+                <h3 class="project-wrapper__text-title">Connections Blog App</h3>
                 <div>
                   <p class="mb-4">
-                    Simple to do list allowing user to add list items, mark items as done, and delete items from list. Project utilizes 
-                    React.js for front end, as well as GraphQL as a RestAPI alternative, and Neon serverless database to persist data.
+                    This is designed to be a fully functional blog app with MongoDB database storing information such as registered users, created post content, post views - 
+                    security features include password hashing for storage using bcrypt and JWT authentication with local storage for 7 day session storage. MongoDB virtual 
+                    schema are included to validate if a user has made a post within the past 30 days, and will set the users account to inactive if activity has been longer
+                    than 30 days ago. Other virtual properties include calculations for populating user posts and awarding user badges after reaching separate tiers. The final 
+                    idea is to integrate Video Chat API so users can join a private chat room and video conference. This project utilizes the MVC design pattern.
                   </p>
                 </div>
                 <a
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--hero"
-                  href="https://graphql-todolist.onrender.com/"
+                  href="https://exquisite-khapse-7e8e7c.netlify.app/"
                 >
                   See Live
                 </a>
@@ -255,7 +259,7 @@
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn text-color-main"
-                  href="https://github.com/Anton-Igudesman/graphql-todolist"
+                  href="https://github.com/Anton-Igudesman/blog-backend"
                 >
                   Source Code
                 </a>
@@ -263,7 +267,7 @@
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="https://graphql-todolist.onrender.com/" target="_blank">
+                <a rel="noreferrer" href="https://exquisite-khapse-7e8e7c.netlify.app/" target="_blank">
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -271,10 +275,11 @@
                     data-tilt-max-glare="0.5"
                     class="thumbnail rounded js-tilt"
                   >
+                  
                     <img
                       alt="Project Image"
                       class="img-fluid"
-                      src="./assets/graphql-todo.png"
+                      src="./assets/blogshot.png"
                     />
                   </div>
                 </a>
@@ -315,13 +320,10 @@
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <div class="social-links">
-          <a rel="noreferrer" href="#!" target="_blank">
-            <i class="fa fa-twitter fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href="#!" target="_blank">
+          <a rel="noreferrer" href="https://www.linkedin.com/in/anton-igudesman-35757711/" target="_blank">
             <i class="fa fa-linkedin fa-inverse"></i>
           </a>
-          <a rel="noreferrer" href="#!" target="_blank">
+          <a rel="noreferrer" href="https://github.com/Anton-Igudesman" target="_blank">
             <i class="fa fa-github fa-inverse"></i>
           </a>
         </div>
@@ -336,31 +338,7 @@
           >
         </p>
 
-        <!-- TO DO: remove this entire paragraph once you finish your portfolio -->
-        <p class="mt-3 pt-3">
-          <a
-            rel="noreferrer"
-            class="github-button"
-            href="https://github.com/cobidev/simplefolio/fork"
-            data-icon="octicon-repo-forked"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Fork ntkme/github-buttons on GitHub"
-            >Fork</a
-          >
-          <a
-            rel="noreferrer"
-            class="github-button"
-            href="https://github.com/cobidev/simplefolio"
-            data-icon="octicon-star"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star cobidev/simplefolio on GitHub"
-            >Star</a
-          >
-        </p>
-      </div>
-    </footer>
+        
     <!-- /END Footer Section -->
 
     <script defer type="module" src="index.js"></script>
